@@ -11,7 +11,7 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface phoneMapper {
 
-    @Insert("insert id,username,phone,content,sendTime into phoneTable values (#{username},#{phone},#{content},#{sendTime})")
-    public int insertPhoneMessage();
+    @Insert("insert into phonetable (id,phone,content,sendTime)  VALUES (null,#{mobile},#{param},now())")
+    public int insertPhoneMessage(String param ,String mobile);
 
 }
