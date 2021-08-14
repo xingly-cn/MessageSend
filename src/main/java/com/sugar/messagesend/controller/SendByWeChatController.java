@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class SendByWeChatController {
     @Autowired
     wechatMapper wechatMapper;
-    String URL = "http://www.pushplus.plus/send";  // 微信请求地址
+    String URL = "http://www.pushplus.plus/send";  // 微信推送地址
 
     /**
      * WeChat推送
@@ -43,4 +43,6 @@ public class SendByWeChatController {
         wechatMapper.insertWeChatMessage(title,content,webhook);  // 存入微信数据库
         return new ToResult(200,"Send Ok",1, JSONObject.parseObject(result));
     }
+
+
 }
