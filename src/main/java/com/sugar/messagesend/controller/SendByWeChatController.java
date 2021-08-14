@@ -43,6 +43,4 @@ public class SendByWeChatController {
         wechatMapper.insertWeChatMessage(title,content,webhook);  // 存入微信数据库
         return new ToResult(200,"Send Ok",1, JSONObject.parseObject(result));
     }
-
-
 }
