@@ -11,12 +11,7 @@ import com.sugar.messagesend.common.EmailConfig;
  */
 public class EmailUtils {
     public static String ToJsonStr(String receive,String title,String content) {
-        JSONObject JsonData = JSONUtil.createObj();
-        JsonData.put("fsyx", EmailConfig.FSYX);
-        JsonData.put("yxmm",EmailConfig.YXMM);
-        JsonData.put("jsyx",receive);
-        JsonData.put("bt",title);
-        JsonData.put("nr",content);
-        return JSONUtil.toJsonStr(JsonData);
+        String DATA="?fsyx="+EmailConfig.FSYX+"&yxmm="+EmailConfig.YXMM+"&jsyx="+receive+"&bt="+title+"&nr="+content;
+        return DATA;
     }
 }
