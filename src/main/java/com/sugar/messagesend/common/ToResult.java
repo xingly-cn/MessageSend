@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ToResult {
-    private String code;
+    private Integer code;
     private String msg;
     private Integer count;
     private Object data;
