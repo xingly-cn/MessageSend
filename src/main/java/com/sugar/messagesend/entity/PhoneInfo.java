@@ -16,7 +16,6 @@ import java.util.Date;
 @NoArgsConstructor
 public class PhoneInfo {
     private Integer id;
-    private String username;
     private String phone;
     private String content;
     private Date sendTime;
